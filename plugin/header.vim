@@ -7,6 +7,7 @@ command! AddMITLicense call header#add_header(2, 'mit', 0)
 command! AddApacheLicense call header#add_header(2, 'apache', 0)
 command! AddGNULicense call header#add_header(2, 'gnu', 0)
 command! AddWTFPLLicense call header#add_header(2, 'wtfpl', 0)
+command! AddMPLLicense call header#add_header(2, 'mpl', 0)
 
 " Set default global values
 if !exists('g:header_auto_add_header') || g:header_auto_add_header == 1
