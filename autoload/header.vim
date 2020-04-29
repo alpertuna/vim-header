@@ -196,8 +196,9 @@ fun s:set_props()
         let b:comment_char = ';'
     " ----------------------------------
 	elseif b:filetype == 'markdown'
-		let b:comment_start = '```'
+		let b:comment_begin = '```'
 		let b:comment_end = '```'
+        let b:block_comment = 1
     else
         let b:is_filetype_available = 0
     endif
