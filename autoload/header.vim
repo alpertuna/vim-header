@@ -214,6 +214,14 @@ fun s:set_props()
         let b:block_comment = 1
         let b:comment_begin = '```'
         let b:comment_end = '```'
+        " ----------------------------------
+    elseif b:filetype == 'tcl'
+       let b:first_line = '#!/usr/bin/env tclsh'
+       let b:first_line_pattern = '#!\s*/usr/bin/env\s* tclsh'
+       let b:comment_char = '#'
+    " ----------------------------------
+    elseif b:filetype == 'ada'
+        let b:comment_char = '--'
     else
         let b:is_filetype_available = 0
     endif

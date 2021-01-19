@@ -261,6 +261,7 @@ comment characters (`;`, `//`, `#`, ...). **`#` by default**.
 Filetypes support
 -----------------
 Supported filetypes are:
+- ada
 - arduino
 - asm
 - c
@@ -299,6 +300,7 @@ Supported filetypes are:
 - scala
 - scheme
 - sh
+- tcl
 - tex
 - tmux
 - tsx
