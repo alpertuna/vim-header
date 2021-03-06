@@ -733,3 +733,12 @@ fun header#add_header(type, license, silent)
         echo 'No defined comment syntax for ' . filetype . ' filetype.'
     endif
 endfun
+
+fun header#update_header()
+    call s:set_props()
+    if b:is_filetype_available && s:has_required_headers_in_range(g:header_max_size)
+        let l:longer_header_length = strchars(s:get_longer_header(b:user_headers))
+        call s:update_fields(l:longer_header_length)
+        call s:update_header()
+    endif
+endfunc
