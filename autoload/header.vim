@@ -90,7 +90,9 @@ fun s:set_props()
         \ b:filetype == 'systemverilog' ||
         \ b:filetype == 'verilog' ||
         \ b:filetype == 'lex' ||
-        \ b:filetype == 'yacc'
+        \ b:filetype == 'yacc' ||
+        \ b:filetype == 'cfc' ||
+        \ b:filetype == 'cf'
 
         let b:block_comment = 1
         let b:comment_char = ' *'
@@ -173,6 +175,13 @@ fun s:set_props()
         let b:comment_char = ' -'
         let b:comment_begin = '<!--'
         let b:comment_end = '-->'
+    "-----------------------------------
+    elseif b:filetype == 'cfm' ||
+          \ b:filetype == 'cfml'
+        let b:block_comment = 1
+        let b:comment_char = ' -- '
+        let b:comment_begin = '<!---'
+        let b:comment_end = '--->'
     "-----------------------------------
     elseif b:filetype == 'pug'
         let b:first_line = '//-'
