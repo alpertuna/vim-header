@@ -154,7 +154,8 @@ fun s:set_props()
         let b:comment_char = ";;"
     " ----------------------------------
     elseif b:filetype == "cs" ||
-          \ b:filetype == "proto"
+          \ b:filetype == "proto" ||
+          \ b:filetype == "dart"
         let b:comment_char = "//"
     " ----------------------------------
     elseif b:filetype == "xdefaults"
