@@ -300,6 +300,7 @@ Supported filetypes are:
 - lisp
 - lua
 - make
+- markdown
 - matlab/octave
 - ocaml
 - perl
