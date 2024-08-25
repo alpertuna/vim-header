@@ -99,6 +99,7 @@ fun s:set_props()
         \ b:filetype == 'rust' ||
         \ b:filetype == 'systemverilog' ||
         \ b:filetype == 'verilog' ||
+        \ b:filetype == 'verilog_systemverilog' ||
         \ b:filetype == 'lex' ||
         \ b:filetype == 'yacc'
 
