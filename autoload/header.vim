@@ -96,7 +96,6 @@ fun s:set_props()
         \ b:filetype == 'php' ||
         \ b:filetype == 'go' ||
         \ b:filetype == 'sass' ||
-        \ b:filetype == 'rust' ||
         \ b:filetype == 'systemverilog' ||
         \ b:filetype == 'verilog' ||
         \ b:filetype == 'verilog_systemverilog' ||
@@ -106,6 +105,12 @@ fun s:set_props()
         let b:block_comment = 1
         let b:comment_char = ' *'
         let b:comment_begin = '/**'
+        let b:comment_end = ' */'
+    " ----------------------------------
+    elseif b:filetype == 'rust'
+        let b:block_comment = 1
+        let b:comment_char = ' *'
+        let b:comment_begin = '/*'
         let b:comment_end = ' */'
     " ----------------------------------
     elseif b:filetype == 'haskell'
